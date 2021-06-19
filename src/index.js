@@ -9,14 +9,27 @@ const searchInput = document.querySelector('#search')
 
 form.addEventListener('submit', searchLyrics)
 
-function searchLyrics(e){
+async function searchLyrics(e){
+  
     e.preventDefault()
     const search = searchInput.value
     if(emptyFields([searchInput])){
        // showMessage()
     }else{
-        //fetchAPI()
-        console.log('Buscando')
+       const res=  await fetchAPI(search)
+        res.forEach(image=>{
+            const src = image.previewURL
+            results.innerHTML += `<img src=${src} />`
+        })
+
+       
+        
+           
+    
+        
+        
+
+
     }
     clearInputs([searchInput])
     searchInput.focus()
