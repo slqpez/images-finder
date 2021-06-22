@@ -17,3 +17,23 @@ export function clear(node) {
     node.removeChild(node.firstChild);
   }
 }
+
+
+export function showImages(imagesArray, node){
+ 
+  if(imagesArray.length > 0){
+    imagesArray.forEach((image) => {
+          const src = image.previewURL;
+          node.innerHTML += `
+          <div class = "card">
+          <img src=${src} />
+          <p><b>${image.likes}</b> <span>Likes</span></p>
+          <a class="btn-open" href="${image.largeImageURL}" target="_blank">Abrir imagen</a>
+          </div>
+          `;
+          
+        });
+      } else{
+          showMessage("No se encontraron resultados para tu búsqueda. 😏", "not-found", node)
+      }
+}
