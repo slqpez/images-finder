@@ -85,3 +85,25 @@ h1{
 .card .btn-open:hover{
     background-color: rgba(27, 47, 155, .8) ;
 }
+
+
+.pagination{
+    margin: 1em ;
+    display:flex;
+    justify-content: center;
+    gap: 1em;;
+}
+
+.btn-pag{
+    background-color: rgb(27, 47, 155);
+    color: #fff;
+    padding:.4em;
+    border: none;
+    width:25px;
+    border-radius:3px;
+}
+
+.btn-pag:hover{
+    cursor: pointer;
+    background-color: rgba(27, 47, 155, .8);
+}

@@ -7,7 +7,7 @@ export function showMessage(msg, type, node) {
     node.appendChild(alert);
 
     setTimeout(() => {
-      node.removeChild(alert);
+     node.removeChild(alert);
     }, 2500);
   }
 }
@@ -36,4 +36,16 @@ export function showImages(imagesArray, node){
       } else{
           showMessage("No se encontraron resultados para tu búsqueda. 😏", "not-found", node)
       }
+}
+
+export function createBtnPage(quantity, node, func){
+
+  for (let index = 1; index <quantity; index++) {
+  const btnPag = document.createElement("button")
+  btnPag.className = "btn-pag"
+  btnPag.innerHTML = index
+  btnPag.onclick = func
+
+  node.appendChild(btnPag)
+  }
 }

@@ -10,3 +10,7 @@ export function emptyFields(inputs) {
 export	function clearInputs(inputs){
     inputs.forEach((input) => input.value = '')
 }
+
+export function calcNumberofPages(totalOfresults,itemsPerPage){
+  return (Math.ceil(totalOfresults/ itemsPerPage))
+}
