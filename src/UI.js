@@ -28,7 +28,7 @@ export function showImages(imagesArray, node){
           <div class = "card">
           <img src=${src} />
           <p><b>${image.likes}</b> <span>Likes</span></p>
-          <a class="btn-open" href="${image.largeImageURL}" target="_blank">Abrir imagen</a>
+          <a class="btn-open" href="${image.largeImageURL}" target="_blank" rel="noopener noreferrer">Abrir imagen</a>
           </div>
           `;
           
